@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= best_in_place @user, :name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= best_in_place @user, :email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= best_in_place @user, :address, :as => :textarea, :ok_button => 'Save', :cancel_button => 'Cancel' %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= best_in_place @user, :gender, :as => :select, :collection => [["Male","Male"],["Female","Female"]] %>
+</p>
+
+<p>
+  <strong>Subscribe:</strong>
+  <%= best_in_place @user, :subscribe, as: :checkbox, collection: {false: "No", true: "Yes"} %>
+</p>
+
